@@ -1,9 +1,11 @@
-# tankbind_gui
-TankBind GUI: Protein-Peptide Affinity Prediction and Docking Simulation / TankBind GUI: 단백질-펩타이드 친화도 예측 및 도킹 시뮬레이션
+
+🇰🇷 한글 버전
 TankBind GUI: 단백질-펩타이드 친화도 예측 및 도킹 시뮬레이션
 TankBind의 빠른 결합 친화도 예측과 AutoDock Vina의 정밀한 도킹 시뮬레이션 기능을 통합한 연구용 GUI 애플리케이션
 
 이 프로그램은 복잡한 명령어 없이, 그래픽 인터페이스를 통해 하나의 펩타이드 서열을 다수의 단백질 구조에 대해 스크리닝하고, 높은 친화도를 보이는 후보에 대해 즉시 도킹 시뮬레이션 및 3D 시각화를 수행할 수 있도록 돕습니다.
+
+&lt;br>
 
 ✨ 주요 기능
 결합 친화도 예측: TankBind 모델을 사용하여 단백질-펩타이드 간의 결합 친화도(pK_d)를 빠르게 예측합니다.
@@ -36,7 +38,14 @@ conda env create -f environment.yml
 
 # 생성된 환경 활성화
 conda activate tankbind-suite
-3. 스크립트 내부 경로 설정 (실행 전 필수!)
+3. 데이터 준비 (PDB 파일 다운로드)
+이 애플리케이션을 사용하려면 스크리닝할 단백질의 PDB 파일들이 로컬 컴퓨터에 저장되어 있어야 합니다.
+
+단백질 구조 파일(.pdb 형식)은 공식 RCSB Protein Data Bank (PDB) 웹사이트에서 다운로드할 수 있습니다.
+
+원하는 단백질을 검색하여 PDB 파일을 다운로드한 후, 다음 단계에서 PDB_ROOT 변수에 지정할 폴더 안에 저장해 주세요. 또는, PDBe (유럽)나 PDBj (일본) 같은 미러 사이트를 이용할 수도 있습니다.
+
+4. 스크립트 내부 경로 설정 (실행 전 필수!)
 중요: 코드를 처음 실행하기 전에, 자신의 컴퓨터 환경에 맞게 데이터 경로를 수정해야 합니다.
 
 메인 파이썬 스크립트(<your_main_script_name>.py)를 열어 상단의 # --- 경로 설정 --- 부분을 아래와 같이 수정하세요.
@@ -44,14 +53,14 @@ conda activate tankbind-suite
 Python
 
 # --- 경로 설정 ---
-PDB_ROOT = "C:/Users/YourUser/Documents/TestPDBs/" # PDB 파일들이 있는 폴더 경로
+PDB_ROOT = "C:/Users/YourUser/Documents/TestPDBs/" # 3단계에서 PDB 파일들을 저장한 폴더 경로
 CENTER_PATH = "C:/Users/YourUser/Documents/center_coords.txt" # 중심 좌표 파일 경로
 TANKBIND_DIR = "C:/Users/YourUser/Documents/TankBind" # TankBind 모델 폴더 경로
 OUT_DIR = "C:/Users/YourUser/Documents/TankBind_Results" # 결과 파일이 저장될 폴더 경로
 # ... (다른 경로들도 필요시 수정) ...
 통합 환경을 사용하므로 PYMOL_PYTHON이나 AUTODOCK_VINA_EXECUTABLE 같은 경로는 수정할 필요가 없습니다.
 
-4. 프로그램 실행
+5. 프로그램 실행
 모든 설정이 완료되었습니다. 아래 명령어로 프로그램을 실행합니다.
 
 Bash
@@ -63,12 +72,17 @@ python <your_main_script_name>.py
 🙏 감사의 말
 훌륭한 예측 모델을 제공해 준 TankBind 연구팀에 감사드립니다.
 이 프로젝트는 RDKit, PyMOL, AutoDock Vina 등 여러 오픈소스 도구에 크게 의존하고 있습니다.
+&lt;br>
 
--------------------------------------------------------------------------------------------------
+&lt;br>
+
+🇬🇧 English Version
 TankBind GUI: Protein-Peptide Affinity Prediction and Docking Simulation
 A research-oriented GUI application that integrates the rapid binding affinity prediction of TankBind with the precise docking simulation of AutoDock Vina.
 
 This application enables users to screen a peptide sequence against multiple protein structures through a graphical interface, eliminating the need for complex command-line operations. It allows for immediate docking simulations and 3D visualization for high-affinity candidates.
+
+&lt;br>
 
 ✨ Key Features
 Binding Affinity Prediction: Rapidly predicts the binding affinity (pK_d) between proteins and peptides using the TankBind model.
@@ -85,7 +99,6 @@ Automatically saves searched peptide sequences to a history panel.
 Git: Required to clone the repository.
 Anaconda or Miniconda: Must be installed for Conda environment management.
 NVIDIA GPU & CUDA Toolkit: The TankBind model operates most efficiently in a GPU environment. The provided environment is configured based on CUDA 11.8.
-
 🚀 Installation and Usage
 1. Clone the Project
 Bash
@@ -102,7 +115,14 @@ conda env create -f environment.yml
 
 # Activate the newly created environment
 conda activate tankbind-suite
-3. Configure Paths in the Script (Required!)
+3. Data Preparation (Download PDB Files)
+This application requires local PDB files of the target proteins for screening.
+
+Protein structure files (in .pdb format) can be downloaded from the official RCSB Protein Data Bank (PDB).
+
+Search for your proteins of interest, download their PDB files, and place them into the folder you will specify for the PDB_ROOT variable in the next step. Alternatively, you can use mirror sites such as PDBe (Europe) or PDBj (Japan).
+
+4. Configure Paths in the Script (Required!)
 Important: Before running the application for the first time, you must edit the data paths in the main script to match your local system.
 
 Open the main Python script (<your_main_script_name>.py) and modify the # --- 경로 설정 --- (Path Settings) section at the top.
@@ -110,14 +130,14 @@ Open the main Python script (<your_main_script_name>.py) and modify the # --- �
 Python
 
 # --- Path Settings ---
-PDB_ROOT = "C:/Users/YourUser/Documents/TestPDBs/" # Path to the folder containing your PDB files
+PDB_ROOT = "C:/Users/YourUser/Documents/TestPDBs/" # Path to the folder where you saved PDB files in step 3
 CENTER_PATH = "C:/Users/YourUser/Documents/center_coords.txt" # Path to the center coordinates file
 TANKBIND_DIR = "C:/Users/YourUser/Documents/TankBind" # Path to the TankBind model folder
 OUT_DIR = "C:/Users/YourUser/Documents/TankBind_Results" # Path where result files will be saved
 # ... (Modify other paths as needed) ...
 Since we are using a unified environment, you do not need to modify paths like PYMOL_PYTHON or AUTODOCK_VINA_EXECUTABLE.
 
-4. Run the Application
+5. Run the Application
 Once all settings are configured, run the application with the following command:
 
 Bash
