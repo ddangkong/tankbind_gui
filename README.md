@@ -64,6 +64,7 @@ python <your_main_script_name>.py
 훌륭한 예측 모델을 제공해 준 TankBind 연구팀에 감사드립니다.
 이 프로젝트는 RDKit, PyMOL, AutoDock Vina 등 여러 오픈소스 도구에 크게 의존하고 있습니다.
 
+-------------------------------------------------------------------------------------------------
 TankBind GUI: Protein-Peptide Affinity Prediction and Docking Simulation
 A research-oriented GUI application that integrates the rapid binding affinity prediction of TankBind with the precise docking simulation of AutoDock Vina.
 
