@@ -1,0 +1,69 @@
+# ===================================================================
+# TankBind GUI 통합 환경 설정 파일
+# -------------------------------------------------------------------
+# 이 파일 하나로 프로그램 실행에 필요한 모든 라이브러리와 프로그램을
+# 포함하는 'tankbind-suite'라는 이름의 Conda 환경을 생성합니다.
+#
+# 사용법:
+# conda env create -f environment.yml
+# conda activate tankbind-suite
+# ===================================================================
+
+name: tankbind-suite
+
+channels:
+  - pytorch
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # 1. 기본 환경
+  # -----------------
+  - python=3.9
+  - pip
+
+  # 2. 핵심 프로그램 (다른 환경에서 가져옴)
+  # ------------------------------------
+  - conda-forge::pymol-open-source  # pymol 환경의 핵심
+  - bioconda::autodock-vina       # autodock 환경의 핵심
+
+  # 3. GUI 및 데이터 처리
+  # -----------------------
+  - pyqt=5.15       # 안정성을 위해 5.15 버전으로 고정
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - openpyxl        # 엑셀 출력용
+
+  # 4. Cheminformatics
+  # --------------------
+  - conda-forge::rdkit
+  - bioconda::biopython
+  - conda-forge::openbabel
+
+  # 5. 기계 학습 (PyTorch & CUDA)
+  # -----------------------------
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - pytorch::pytorch-cuda=11.8  # 11.6 기반이므로 11.8로 설정, 호환성 우수
+
+  # 6. 기타 유틸리티
+  # ------------------
+  - tqdm
+  - requests
+  - nest-asyncio
+  - ninja           # TorchDrug 컴파일 시 필요
+
+  # 7. pip 으로 설치할 패키지 (Conda로 설치가 까다로운 경우)
+  # ----------------------------------------------------
+  - pip:
+    - torchmetrics==0.7.3
+    - torchdrug==0.2.1
+    - torch-geometric==2.6.1
+    - torch-cluster==1.6.3
+    - torch-scatter==2.1.2
+    - torch-sparse==0.6.18
+    - torch-spline-conv==1.2.2
