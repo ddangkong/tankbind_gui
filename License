@@ -1,0 +1,86 @@
+---
+
+## Licenses / Acknowledgments
+
+This project utilizes several powerful open-source tools and libraries. We extend our sincere gratitude to their respective developers and communities. Please refer to their individual licenses for more details.
+
+* **TankBind**: [Link to TankBind GitHub / License] (e.g., MIT License)
+* **AutoDock Vina**: [Link to Vina website / documentation] (e.g., GNU General Public License v3.0)
+* **PyMOL**: [Link to PyMOL website / documentation] (e.g., PyMOL Open-Source License)
+* **RDKit**: [Link to RDKit GitHub / website] (e.g., BSD License)
+* **PyQt5**: [Link to PyQt5 website] (e.g., GNU General Public License v3.0)
+* **PyTorch**: [Link to PyTorch GitHub / website] (e.g., BSD-style License)
+* **Pandas**: [Link to Pandas GitHub / website] (e.g., BSD License)
+* **Biopython**: [Link to Biopython website] (e.g., Biopython License Agreement)
+* **Open Babel**: [Link to Open Babel website] (e.g., GNU General Public License)
+* *(... any other significant libraries you use)*
+
+---
+MIT License
+
+Copyright (c) 2025 [Your Name or Organization]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+# Dependencies and Licenses
+
+The TankBind GUI project relies on several open-source packages, each with its own
+license. Below is a list of dependencies from the `environment.yml` file and their
+respective licenses. For precise terms, refer to each package's official documentation
+or source repository.
+
+| Package                  | Source         | License                | Notes                                      |
+|--------------------------|----------------|------------------------|--------------------------------------------|
+| python=3.9               | defaults       | PSF License            | Python Software Foundation License         |
+| pip                      | defaults       | MIT                    |                                            |
+| pymol-open-source        | conda-forge    | BSD-like (PyMOL)       | Open-source version; commercial PyMOL has separate license |
+| autodock-vina            | bioconda       | Apache 2.0             |                                            |
+| pyqt=5.15                | defaults       | GPL/LGPL/Commercial    | GPL/LGPL for open-source; commercial license may apply |
+| pandas                   | defaults       | BSD 3-Clause           |                                            |
+| numpy                    | defaults       | BSD 3-Clause           |                                            |
+| scikit-learn             | defaults       | BSD 3-Clause           |                                            |
+| matplotlib               | defaults       | PSF-like               |                                            |
+| openpyxl                 | defaults       | MIT                    |                                            |
+| rdkit                    | conda-forge    | BSD 3-Clause           |                                            |
+| biopython                | bioconda       | Biopython License      | Similar to BSD                             |
+| openbabel                | conda-forge    | GPL 2.0                | Copyleft; requires source code disclosure  |
+| pytorch                  | pytorch        | BSD-style              |                                            |
+| torchvision              | pytorch        | BSD-style              |                                            |
+| torchaudio               | pytorch        | BSD-style              |                                            |
+| pytorch-cuda=11.8        | pytorch        | BSD-style              | CUDA may include NVIDIA proprietary terms  |
+| tqdm                     | defaults       | MIT/MPL 2.0            |                                            |
+| requests                 | defaults       | Apache 2.0             |                                            |
+| nest-asyncio             | defaults       | BSD 2-Clause           |                                            |
+| ninja                    | defaults       | Apache 2.0             |                                            |
+| torchmetrics==0.7.3      | pip            | Apache 2.0             |                                            |
+| torchdrug==0.2.1         | pip            | Apache 2.0             |                                            |
+| torch-geometric==2.6.1   | pip            | MIT                    |                                            |
+| torch-cluster==1.6.3     | pip            | MIT                    |                                            |
+| torch-scatter==2.1.2     | pip            | MIT                    |                                            |
+| torch-sparse==0.6.18     | pip            | MIT                    |                                            |
+| torch-spline-conv==1.2.2 | pip            | MIT                    |                                            |
+
+## Notes
+- **PyQt5**: Ensure compliance with GPL/LGPL for open-source use. Commercial use requires a license from Riverbank Computing.
+- **PyMOL-open-source**: Verify use of open-source version to avoid commercial PyMOL licensing issues.
+- **OpenBabel**: GPL 2.0 requires source code disclosure if distributing binaries.
+- **CUDA**: Check NVIDIA's terms for CUDA toolkit usage.
+- **Verification**: Always consult the official repository or package documentation for the exact license terms.
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
