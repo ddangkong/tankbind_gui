@@ -76,7 +76,7 @@ MIT 라이선스. 자세한 내용은 `LICENSE` 파일을 참조하세요.
 * RDKit ([https://www.rdkit.org/](https://www.rdkit.org/)), PyMOL ([https://pymol.org/2/](https://pymol.org/2/)), AutoDock Vina ([https://vina.scripps.edu/](https://vina.scripps.edu/)) 등 오픈소스 도구
 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 # TankBind GUI: Protein-Peptide Affinity Prediction and Docking Simulation
 
 This research-oriented GUI application combines **TankBind's rapid binding affinity prediction** with **AutoDock Vina's precise docking simulation**. It offers a user-friendly graphical interface to screen a peptide sequence against multiple protein structures, instantly performing docking simulations and 3D visualizations for high-affinity candidates, all without complex command-line operations.
